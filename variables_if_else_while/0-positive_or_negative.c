@@ -2,6 +2,15 @@
 #include <stdio.h>
 #include <time.h>
 
+
+/**
+ * main - Entry Point of the program
+ *
+ * Description: This function prints the size of various types
+ *
+ * Return: Always 0 (success)
+ */
+
 int main(void)
 {
     int n;
