@@ -8,7 +8,7 @@
  */
 void printPutchar(void)
 {
-    printf("_putchar\n");
+printf("_putchar\n");
 }
 
 /**
@@ -21,6 +21,6 @@ void printPutchar(void)
  */
 int main(void)
 {
-    printPutchar();
-    return (0);
+printPutchar();
+return (0);
 }
