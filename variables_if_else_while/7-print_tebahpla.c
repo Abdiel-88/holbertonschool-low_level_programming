@@ -4,7 +4,7 @@
  * main - Entry point
  *
  * Description: This program prints the lowercase alphabet,
- * excluding the letters 'e' and 'q', followed by a new line.
+ * in reverse
  *
  * Return: Always 0 (Success)
  */
@@ -14,7 +14,7 @@ int main(void)
 
 	while (letter >= 'a')
 	{
-	        
+	  putchar(letter);     
 	  letter--;
 	}
 
