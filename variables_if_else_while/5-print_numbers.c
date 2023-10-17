@@ -3,17 +3,21 @@
 /**
  * main - Entry point
  *
- * Description: This program prints all single-digit numbers in base 10,
- * starting from 0, followed by a new line.
+ * Description: This program prints all single-digit numbers in base 10
+ * without newlines.
  *
  * Return: Always 0 (Success)
  */
-int main(void) {
-    int number;
+int main(void)
+{
+	int number;
 
-    for (number = 0; number <= 9; number++) {
-        printf("%d\n", number);
-    }
+	for (number = 0; number <= 9; number++)
+	{
+		putchar('0' + number);
+	}
 
-    return (0);
+	putchar('\n'); /* Add a newline character to the end */
+
+	return (0);
 }
