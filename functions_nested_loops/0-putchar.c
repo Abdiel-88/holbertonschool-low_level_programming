@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 
-void printPutchar();  // Function prototype
+void printPutchar();  /* Function prototype */
 
 int main() {
     printPutchar();
