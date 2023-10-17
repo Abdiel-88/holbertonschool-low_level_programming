@@ -3,10 +3,10 @@
 #include <unistd.h>
 
 
-// Declarations and includes go here
+/* Declarations and includes go here */
 
 int add(int a, int b);
 
 
 
-#endif // MAIN_h
+#endif /* End */
