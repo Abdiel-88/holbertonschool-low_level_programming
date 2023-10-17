@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 /**
@@ -9,7 +10,9 @@
  * Return: Always 0 (Success)
  */
 int main(void) {
-    for (int number = 0; number < 10; number++) {
+    int number;
+
+    for (number = 0; number < 10; number++) {
         putchar('0' + number);
         if (number < 9) {
             putchar(',');
@@ -17,7 +20,7 @@ int main(void) {
         }
     }
 
-    putchar('\n'); // Print a newline character
+    putchar('\n'); /* Print a newline character */
 
     return 0;
 }
