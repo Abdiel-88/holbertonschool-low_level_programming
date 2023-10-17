@@ -15,11 +15,12 @@ int main(void) {
         putchar('0' + number);
     }
 
-    for (char letter = 'a'; letter <= 'f'; letter++) {
+    char letter;
+    for (letter = 'a'; letter <= 'f'; letter++) {
         putchar(letter);
     }
 
-    putchar('\n'); // Print a newline character
-
-    return (0);
+    putchar('\n');
+    
+    return 0;
 }
