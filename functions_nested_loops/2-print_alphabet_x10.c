@@ -3,7 +3,7 @@
 /**
  * print_alphabet - Prints the lowercase alphabet ten times followed by a new line.
  */
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
     char letter = 'a';
     int times = 0;
@@ -20,7 +20,7 @@ void print_alphabet(void)
 	_putchar('\n');
 
 	
-	letter = "a";/* Resets letter to "a" for next iteration */
+	letter = 'a';/* Resets letter to "a" for next iteration */
 	times++;
       }
 }
