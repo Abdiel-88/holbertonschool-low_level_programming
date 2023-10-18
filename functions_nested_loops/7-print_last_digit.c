@@ -15,6 +15,8 @@ last_digit = -n % 10;
 else
 last_digit = n % 10;
 
+last_digit = (last_digit < 0) ? -last_digit : last_digit;
+
 _putchar('0' + last_digit);
 
 return (last_digit);
