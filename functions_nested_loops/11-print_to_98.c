@@ -1,15 +1,24 @@
 #include "main.h"
 
 
-void print_to_98(int x)
+void print_to_98(int n)
 {
-  x = 0;
-  while (x <= 98)
+  
+  while (n <= 98)
     {
-      _putchar(x);
-      _putchar(",");
-      _putchar(" ");
+      _putchar(n);
+      _putchar(',');
+      _putchar(' ');
 
-      x++;
+
+      if (n != 98)
+	{
+	  _putchar (',');
+	  _putchar(' ');
+	}
+
+      n++;
+
     }
+  _putchar('\n');
 }
