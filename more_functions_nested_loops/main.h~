@@ -1,0 +1,11 @@
+#ifndef MAIN_H
+#define MAIN_H
+#include <unistd.h>
+
+
+/* Declarations and includes go here */
+
+int _isupper(int c);
+
+
+#endif /* End */
