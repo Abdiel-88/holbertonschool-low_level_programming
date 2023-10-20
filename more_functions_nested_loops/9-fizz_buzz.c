@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-    int i = 1; // Initialize a counter
+    int i = 1; 
 
     while (i <= 100)
     {
@@ -29,7 +29,7 @@ int main(void)
         }
         i++;
     }
-    printf("\n"); // Print a newline to end the output
+    printf("\n"); 
 
     return (0);
 }
