@@ -6,6 +6,7 @@
  * Return: 0 (Success)
  */
 int main()
+{
   for (int num =1; num <= 100; num++)
     {
       if (num % 3 == 0 && num % 5 == 0)
