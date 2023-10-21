@@ -2,11 +2,11 @@
 
 int main()
 {
-  int num;  // Declare the loop variable outside the loop
+  int num;  
 
   for (num = 1; num <= 100; num++)
   {
-    // Rest of the code remains the same
+    
     if (num % 3 == 0 && num % 5 == 0)
     {
       printf("FizzBuzz");
@@ -31,4 +31,3 @@ int main()
   printf("\n");
   return 0;
 }
-
