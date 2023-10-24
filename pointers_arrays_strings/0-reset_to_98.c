@@ -1,23 +1,25 @@
-#include <stdio.h>
-/*
- * reset_to_98 resets to 98.
- *
- */
+#include "my_header.h"
 
-void reset_to_98(int *n)
+/**
+ * add_numbers - Adds two numbers.
+ * @a: The first number.
+ * @b: The second number.
+ *
+ * Return: The sum of a and b.
+ */
+int add_numbers(int a, int b)
 {
-    *n = 98;
+return (a + b);
 }
 
-int main()
+/**
+ * main - Entry point of the program.
+ *
+ * Return: 0 on success.
+ */
+int main(void)
 {
-    int num = 42; 
-    printf("Before: %d\n", num);
-    
-    
-    reset_to_98(&num);
-    
-    printf("After: %d\n", num);
-
-    return 0;
+int result = add_numbers(5, 7);
+printf("The result is %d\n", result);
+return (0);
 }
