@@ -1,9 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include <unistd.h>
 
+#include <stdio.h>
 
-/* Declarations and includes go here */
+/* Function prototypes go here */
 
 int _putchar(char c);
 void reset_to_98(int *n);
