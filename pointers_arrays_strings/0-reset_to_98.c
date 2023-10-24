@@ -1,25 +1,22 @@
 #include "main.h"
 
 /**
- * add_numbers - Adds two numbers.
- * @a: The first number.
- * @b: The second number.
- *
- * Return: The sum of a and b.
+ * reset_to_98 - Updates the value it points to 98.
+ * @n: A pointer to an integer.
  */
-int add_numbers(int a, int b)
+void reset_to_98(int *n)
 {
-return (a + b);
+    *n = 98;
 }
 
-/**
- * main - Entry point of the program.
- *
- * Return: 0 on success.
- */
 int main(void)
 {
-int result = add_numbers(5, 7);
-printf("The result is %d\n", result);
-return (0);
+    int num = 42;
+    printf("Before: %d\n", num);
+
+    reset_to_98(&num);
+
+    printf("After: %d\n", num);
+
+    return (0);
 }
