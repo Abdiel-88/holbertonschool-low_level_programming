@@ -1,4 +1,4 @@
-#include "my_header.h"
+#include "main.h"
 
 /**
  * add_numbers - Adds two numbers.
