@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * leet - Encodes a string into 1337.
  * @str: A pointer to the input string.
@@ -8,8 +7,8 @@
  */
 char *leet(char *str)
 {
-char *leet_chars = "AaEeOoTtLl";
-char *leet_replacements = "44337711";
+char leet_chars[] = "AaEeOoTtLl";
+char leet_replacements[] = "44337711";
 int i, j;
 
 for (i = 0; str[i] != '\0'; i++)
@@ -25,3 +24,4 @@ break;
 }
 return (str);
 }
+
