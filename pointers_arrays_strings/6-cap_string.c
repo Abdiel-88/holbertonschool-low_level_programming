@@ -1,0 +1,32 @@
+#include "main.h"
+#include <ctype.h>
+
+/**
+ * cap_string - Capitalizes all words in a string.
+ * @str: A pointer to the input string.
+ *
+ * Return: A pointer to the modified string.
+ */
+char *cap_string(char *str)
+{
+int i = 0;
+int capitalize = 1;
+
+while (str[i] != '\0')
+{
+if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
+str[i] == ',' || str[i] == ';' || str[i] == '.' || str[i] == '!' ||
+str[i] == '?' || str[i] == '"' || str[i] == '(' || str[i] == ')' ||
+str[i] == '{' || str[i] == '}')
+{
+capitalize = 1;
+}
+else if (capitalize)
+{
+str[i] = toupper((unsigned char)str[i]);
+capitalize = 0;
+}
+i++;
+}
+return (str);
+}
