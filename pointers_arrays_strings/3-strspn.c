@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stddef.h>
+#include <string.h>
 
 unsigned int _strspn(char *s, char *accept)
 {
