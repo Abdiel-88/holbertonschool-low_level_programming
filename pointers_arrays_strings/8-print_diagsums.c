@@ -18,6 +18,6 @@ diag1_sum += a[i * size + i];
 diag2_sum += a[i * size + (size - 1 - i)];
 }
 
-printf("Sum of diagonal 1: %d, Sum of diagonal 2: %d\n", diag1_sum, diag2_sum);
+printf("%d, %d\n", diag1_sum, diag2_sum);
 
 }
