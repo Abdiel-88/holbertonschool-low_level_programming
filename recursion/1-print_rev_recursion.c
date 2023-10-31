@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h
+#include <stdio.h>
 /**
  * _print_rev_recursion - Prints a string in reverse using recursion.
  * @s: The string to be printed in reverse.
