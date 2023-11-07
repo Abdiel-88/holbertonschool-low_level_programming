@@ -1,47 +1,53 @@
 #include "main.h"
-#include <stdlib.h> 
+#include <stdlib.h>
 
 /**
- * _strdup - returns a pointer to a newly allocated space in memory,
- * which contains a copy of the string given as a parameter.
- * @str: The string to duplicate.
+ * str_concat - Concatenates two strings.
+ * @s1: The first string.
+ * @s2: The second string.
  *
- * Return: A pointer to the duplicated string on success, 
- * or NULL if str is NULL or if insufficient memory was available.
+ * Return: A pointer to the newly concatenated string, or NULL on failure.
  */
-char *_strdup(char *str)
+char *str_concat(char *s1, char *s2)
 {
-char *dup;
-unsigned int len = 0;
-unsigned int i;
-
-/*Step 1: Check if `str` is NULL*/
-if (str == NULL)
+char *new_str;
+int i, j;
+int length_s1 = 0;
+int length_s2 = 0;
+/* Step 1: Handle NULL inputs */
+if (s1 == NULL)
 {
-return (NULL);
+s1 = "";
 }
-
-/* Step 2: Calculate the length of `str`*/
-while (str[len])
+if (s2 == NULL)
 {
-len++;
+s2 = "";
 }
-
-/* Step 3: Allocate memory for the new string (+1 for the null terminator)*/
-dup = (char *)malloc((len + 1) * sizeof(char));
-
-/*Check if malloc was successful*/
-if (dup == NULL) {
-return (NULL);
-}
-
-/* Step 4: Copy `str` into the allocated memory*/
-for (i = 0; i < len; i++)
+/* Step 2: Calculate lengths */
+while (s1[length_s1])
 {
-dup[i] = str[i];
+length_s1++;
 }
-dup[len] = '\0'; /* null-terminate the duplicated string*/
-
-/* Step 5: Return the pointer to the new string*/
-return (dup);
+while (s2[length_s2])
+{
+length_s2++;
+}
+/* Step 3: Allocate memory */
+new_str = malloc(length_s1 + length_s2 + 1); /* +1 for the null terminator*/
+if (new_str == NULL)
+{
+return (NULL); /* Return NULL on failure */
+}
+/* Step 4: Concatenate strings */
+for (i = 0; i < length_s1; i++)
+{
+new_str[i] = s1[i];
+}
+for (j = 0; j < length_s2; j++, i++)
+{
+new_str[i] = s2[j];
+}
+/* Step 5: Null terminate the new string*/
+new_str[i] = '\0';
+return (new_str);
 }
