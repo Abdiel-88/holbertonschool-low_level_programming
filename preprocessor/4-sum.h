@@ -1,0 +1,15 @@
+#ifndef SUM_H
+#define SUM_H
+
+/**
+ * file 4-sum.h
+ * Author: OpenAI Assistant
+ * Desc: Function-like macro SUM(x, y) for computing the sum of x and y
+ *
+ * @x: First integer
+ * @y: Second integer
+ */
+
+#define SUM(x, y) ((x) + (y))
+
+#endif /* SUM_H */
