@@ -4,7 +4,8 @@
 /**
  * file 3-function_like_macro.h
  * author OpenAI Assistant
- * description: Function-like macro ABS(x) for computing the absolute value of x
+ * description: Function-like macro ABS(x).
+ * @x: Integer
  */
 
 #define ABS(x) ((x) < 0 ? -(x) : (x))
