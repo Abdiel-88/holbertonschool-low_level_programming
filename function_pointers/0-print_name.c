@@ -17,22 +17,3 @@ if (name != NULL && f != NULL)
 f(name);
 }
 }
-
-/**
- * print_to_console - Prints a string to the console.
- * @str: The string to print.
- *
- * Description: This function takes a string and prints it to the console.
- */
-void print_to_console(char *str)
-{
-printf("%s\n", str);
-}
-
-int main()
-{
-char *name = "Alice";
-print_name(name, print_to_console);
-
-return (0);
-}
