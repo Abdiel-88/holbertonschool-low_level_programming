@@ -9,38 +9,38 @@
  */
 void print_all(const char * const format, ...) {
     va_list args;
-    int i = 0, j;
-    char *str, format_types[] = "cifs";
+    int i = 0, format_found;
+    char *str, *separator = "";
 
     va_start(args, format);
 
     while (format != NULL && format[i] != '\0') {
-        j = 0;
-        while (format_types[j] != '\0') {
-            if (format[i] == format_types[j]) {
-                switch (format[i]) {
-                    case 'c':
-                        printf("%c", va_arg(args, int));
-                        break;
-                    case 'i':
-                        printf("%d", va_arg(args, int));
-                        break;
-                    case 'f':
-                        printf("%f", va_arg(args, double));
-                        break;
-                    case 's':
-                        str = va_arg(args, char *);
-                        printf("%s", (str != NULL) ? str : "(nil)");
-                        break;
-                }
-                
-                if (format[i + 1] != '\0' && (format[i + 1] == 'c' || format[i + 1] == 'i' || format[i + 1] == 'f' || format[i + 1] == 's')) {
-                    printf(", ");
-                }
+        format_found = 0;
+
+        switch (format[i]) {
+            case 'c':
+                printf("%s%c", separator, va_arg(args, int));
+                format_found = 1;
                 break;
-            }
-            j++;
+            case 'i':
+                printf("%s%d", separator, va_arg(args, int));
+                format_found = 1;
+                break;
+            case 'f':
+                printf("%s%f", separator, va_arg(args, double));
+                format_found = 1;
+                break;
+            case 's':
+                str = va_arg(args, char *);
+                printf("%s%s", separator, (str != NULL) ? str : "(nil)");
+                format_found = 1;
+                break;
         }
+
+        if (format_found) {
+            separator = ", ";
+        }
+
         i++;
     }
 
