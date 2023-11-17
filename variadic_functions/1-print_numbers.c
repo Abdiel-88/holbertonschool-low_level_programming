@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 /**
- * print_numbers - prints numbers with a given separator, followed by a newline.
+ * print_numbers - prints numbers with a given separator.
  * @separator: The string to be printed between numbers.
  * @n: The number of integers passed to the function.
  * ...: A variable number of integer parameters to print.
