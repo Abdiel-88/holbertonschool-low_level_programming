@@ -13,5 +13,5 @@ if (index >= sizeof(n) * 8)
 {
 return (-1); /* Return -1 if index is out of range */
 }
-return ((n >> index) & 1); /* Shift 'n' right 'index' times and return the least significant bit */
+return ((n >> index) & 1);
 }
