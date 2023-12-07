@@ -20,7 +20,7 @@ new_table->size = size;
 new_table->array = malloc(sizeof(hash_node_t *) * size);
 if (new_table->array == NULL)
 {
-free(new_table); // Important to avoid memory leaks
+free(new_table);
 return (NULL);
 }
 /* Initialize array elements to NULL */
