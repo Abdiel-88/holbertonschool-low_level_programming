@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <sys/types.h>  // For ssize_t and size_t
+#include <sys/types.h>
 
 /* Function Prototypes */
 
