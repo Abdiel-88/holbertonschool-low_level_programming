@@ -3,19 +3,42 @@
 
 #include <stddef.h> /* For size_t */
 
-/* Node of a hash table */
+/**
+ * struct hash_node_s - Node of a hash table
+ *
+ * @key: The key, string
+ *       The key is unique in the HashTable
+ * @value: The value corresponding to a key
+ * @next: A pointer to the next node of the List
+ *
+ * Description: Node structure for a hash table. Each node contains
+ *              a key-value pair and a pointer to the next node in case
+ *              of a collision, allowing a linked list structure.
+ */
 typedef struct hash_node_s
 {
-char *key; /* The key, string (The key is unique in the HashTable) */
-char *value; /* The value corresponding to a key */
-struct hash_node_s *next; /* A pointer to the next node of the list */
+    char *key; /* The key, string (The key is unique in the HashTable) */
+    char *value; /* The value corresponding to a key */
+    struct hash_node_s *next; /* A pointer to the next node of the list */
 } hash_node_t;
 
-/* Hash table data structure */
+/**
+ * struct hash_table_s - Hash table data structure
+ *
+ * @size: The size of the array
+ * @array: An array of size @size
+ *         Each cell of this array is a pointer to the first node of a linked list,
+ *         because we want our HashTable to use a Chaining collision handling
+ *
+ * Description: Hash table structure which contains an array of pointers
+ *              to hash_node_t. Each element in the array represents a bucket
+ *              that potentially contains a linked list of nodes due to
+ *              collision handling via chaining.
+ */
 typedef struct hash_table_s
 {
-unsigned long int size; /* The size of the array */
-hash_node_t **array; /* An array of size @size */
+    unsigned long int size; /* The size of the array */
+    hash_node_t **array; /* An array of size @size */
 } hash_table_t;
 
 /* Function prototypes */

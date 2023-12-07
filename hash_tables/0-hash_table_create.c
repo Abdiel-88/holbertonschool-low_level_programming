@@ -14,7 +14,7 @@ unsigned long int i;
 /* Allocate memory for the hash table structure */
 new_table = malloc(sizeof(hash_table_t));
 if (new_table == NULL)
-return NULL;
+return (NULL);
 /* Initialize the elements of the hash table */
 new_table->size = size;
 new_table->array = malloc(sizeof(hash_node_t *) * size);
