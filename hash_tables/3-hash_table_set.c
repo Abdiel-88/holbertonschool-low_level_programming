@@ -23,7 +23,6 @@ index = key_index((const unsigned char *)key, ht->size);
 temp = ht->array[index];
 while (temp != NULL)
 {
-/* Update the value if the key already exists */
 if (strcmp(temp->key, key) == 0)
 {
 free(temp->value);
@@ -34,7 +33,6 @@ return (1);
 }
 temp = temp->next;
 }
-/* Create a new node */
 new_node = malloc(sizeof(hash_node_t));
 if (new_node == NULL)
 return (0);
@@ -51,7 +49,6 @@ free(new_node->key);
 free(new_node);
 return (0);
 }
-/* Insert the node at the beginning of the list to handle collision */
 new_node->next = ht->array[index];
 ht->array[index] = new_node;
 return (1);
