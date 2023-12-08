@@ -43,6 +43,7 @@ hash_node_t **array; /* An array of size @size */
 
 /* Function prototypes */
 hash_table_t *hash_table_create(unsigned long int size);
+unsigned long int hash_djb2(const unsigned char *str);
 
 /* Other function prototypes would go here, for example: */
 /* int hash_table_set(hash_table_t *ht, const char *key, const char *value); */
