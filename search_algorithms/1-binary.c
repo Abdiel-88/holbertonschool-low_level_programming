@@ -44,7 +44,7 @@ while (left <= right)
 print_array(array, left, right);
 mid = left + (right - left) / 2;
 if (array[mid] == value)
-return (int)mid;
+return ((int)mid);
 if (array[mid] < value)
 left = mid + 1;
 else
